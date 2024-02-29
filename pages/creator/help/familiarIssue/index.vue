@@ -28,6 +28,7 @@
 </template>
 
 <script setup lang="ts">
+useHead({ title:'常见问题 - 创作中心'})
 </script>
 
 <style scoped lang="scss">

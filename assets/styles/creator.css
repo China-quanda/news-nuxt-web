@@ -46,3 +46,23 @@
 .creator-page-help .slot-title div:hover {
   color: var(--primary);
 }
+
+.setting-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  color: #000;
+  border-bottom: 1px solid #eae7e7;
+}
+
+.setting-body {
+  padding: 15px;
+}
+
+.setting-page-home {
+  color: #1e1d1d;
+}
+
+.setting-page-profile {
+  color: #000;
+}

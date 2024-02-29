@@ -5,6 +5,7 @@
 </template>
 
 <script setup lang="ts">
+useHead({ title:'创作首页 - 创作中心'})
 </script>
 
 <style scoped lang="scss">

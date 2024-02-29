@@ -9,6 +9,7 @@
 </template>
 
 <script setup lang="ts">
+useHead({ title:'文章管理 - 创作中心'})
 const activeTab = ref(1)
 interface ITab {
 	id:number

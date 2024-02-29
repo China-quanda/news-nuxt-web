@@ -5,6 +5,7 @@
 </template>
 
 <script setup lang="ts">
+useHead({ title:'文章数据 - 创作中心'})
 </script>
 
 <style scoped lang="scss">

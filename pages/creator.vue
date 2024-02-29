@@ -1,4 +1,5 @@
 <script setup lang="ts">
+useHead({ title:'创作中心'})
 const router = useRouter()
 let activeMenu = ref('');
 let menuList = reactive([
@@ -33,7 +34,10 @@ const handleMenu = (menu: any) => {
   router.push({ path: menu.url })
 };
 
-
+onMounted(()=>{
+  console.log('onMounted')
+  router.replace('/creator/home')
+})
 </script>
 
 <template>
@@ -49,7 +53,7 @@ const handleMenu = (menu: any) => {
           </div>
 
           <div class="write-article">
-            <el-button type="primary" icon="EditPen" style="width: 100%;"> 写文章 </el-button>
+            <el-button type="primary" class="w-full"> <Icon name="ep:edit-pen" class="mr-1"/> 写文章 </el-button>
           </div>
 
           <div class="sidebar-menu-submenu" v-for="menu in menuList" :key="menu.name">
@@ -65,7 +69,7 @@ const handleMenu = (menu: any) => {
         </div>
       </div>
       <div class="right-box-card">
-        <NuxtPage />
+        <NuxtPage class="main"/>
         <!-- <router-view class="main" /> -->
       </div>
     </div>

@@ -44,6 +44,7 @@
 </template>
 
 <script setup lang="ts">
+useHead({ title:'帮助中心 - 创作中心'})
 const currentCollapse = ref<ICollapse[]>()
 const activeCollapse = ref(1)
 const activeTab = ref(1)

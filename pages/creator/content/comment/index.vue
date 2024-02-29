@@ -5,6 +5,7 @@
 </template>
 
 <script setup lang="ts">
+useHead({ title:'评论管理 - 创作中心'})
 </script>
 
 <style scoped lang="scss">

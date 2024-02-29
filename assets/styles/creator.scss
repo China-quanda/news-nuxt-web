@@ -43,3 +43,24 @@
     }
 	}
 }
+
+// 设置setting 模块
+.setting{
+	&-header{
+		display: flex;
+		justify-content: space-between;
+		padding: 15px;
+    // color: var(--main-color);
+    color: #000;
+		border-bottom: 1px solid #eae7e7;
+	}
+	&-body{
+		padding: 15px;
+	}
+	&-page-home{
+    color: #1e1d1d;
+	}
+  &-page-profile{
+    color: #000;
+	}
+}

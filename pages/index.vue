@@ -43,8 +43,9 @@ const change = ()=>{
   console.log(counter.times)
   console.log(counter.name)
 }
-
+const router = useRouter()
 onMounted(()=>{
-  console.log('onMounted')
+  // console.log('onMounted')
+  router.replace('/creator')
 })
 </script>
