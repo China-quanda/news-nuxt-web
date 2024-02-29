@@ -1,0 +1,45 @@
+.creator{
+  
+	&-header{
+		display: flex;
+		justify-content: space-between;
+		padding: 15px;
+		border-bottom: 1px solid #eae7e7;
+	}
+	&-body{
+		padding: 15px;
+	}
+	&-page-home{
+    color: #1e1d1d;
+	}
+  &-page-article{
+    .slot-title{
+      display: flex;
+      .active{
+        color: var(--primary);
+      }
+      div{
+        cursor: pointer;
+        margin-right: 15px;
+        &:hover{
+          color: var(--primary);
+        }
+      }
+    }
+	}
+  &-page-help{
+    .slot-title{
+      display: flex;
+      .active{
+        color: var(--primary);
+      }
+      div{
+        cursor: pointer;
+        margin-right: 15px;
+        &:hover{
+          color: var(--primary);
+        }
+      }
+    }
+	}
+}

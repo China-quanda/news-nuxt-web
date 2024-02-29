@@ -1,13 +1,8 @@
 <template>
-	<my-card title="常见问题" :boxShadow="false">
-		<template v-slot:title>
-			<div class="slot-title">
-				<span>创作等级</span>
-				<span>内容曝光</span>
-				<span>内容审核</span>
-			</div>
-		</template>
-		<div class="familiar-issue-box">
+	<div class="creator-page-help-familiarIssue">
+		<div class="creator-header"> 常见问题 </div>
+		<div class="creator-body">
+			<div class="familiar-issue-box">
 			<div class="familiar-issue-item">
 				<div class="title">为什么会有安全审核</div>
 				<div>1. 根据国家相关法律法规规定，保障平台内容安全：过滤涉黄、涉暴、涉毒、赌博等安全底线问题。</div>
@@ -28,17 +23,14 @@
 				<div>申诉渠道：审核未通过的内容，如果作者自查后，仍无法感知到问题所在，请访问沸点圈子「反馈&建议」提交你的问题和文章链接，官方将在排查后给你留言反馈相关调整策略。</div>
 			</div>
 		</div>
-		
-	</my-card>
+		</div>
+	</div>
 </template>
 
 <script setup lang="ts">
 </script>
 
 <style scoped lang="scss">
-	.slot-title{
-		span{margin-right: 10px;}
-	}
 	.familiar-issue-box{
 		font-size: 14px;
 		.familiar-issue-item{

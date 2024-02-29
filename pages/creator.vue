@@ -32,6 +32,8 @@ const handleMenu = (menu: any) => {
   if (!menu.url) return;
   router.push({ path: menu.url })
 };
+
+
 </script>
 
 <template>
@@ -41,14 +43,13 @@ const handleMenu = (menu: any) => {
         <div class="sidebar-menu-box">
           <div class="creator-user">
             <div class="user-avatar">
-              <img src="@/assets/images/vue.svg"/>
+              <!-- <img src="@/assets/images/vue.svg"/> -->
             </div>
             <div class="user-name">你的Maya</div>
           </div>
 
           <div class="write-article">
-            <!-- <my-button type="primary" icon="icon-dianzan1">写文章</my-button> -->
-            <button>icon-dianzan1 写文章</button>
+            <el-button type="primary" icon="EditPen" style="width: 100%;"> 写文章 </el-button>
           </div>
 
           <div class="sidebar-menu-submenu" v-for="menu in menuList" :key="menu.name">
@@ -66,7 +67,6 @@ const handleMenu = (menu: any) => {
       <div class="right-box-card">
         <NuxtPage />
         <!-- <router-view class="main" /> -->
-        <!-- <div v-for="(item, index) in 800" :key="index">{{ index }}</div> -->
       </div>
     </div>
   </div>
