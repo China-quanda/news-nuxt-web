@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <Login v-if="showLogin"></Login>
-    <!-- <AppHeader></AppHeader> -->
+    <AppHeader></AppHeader>
     <NuxtPage class="main"/>
     <BackTop></BackTop>
   </div>
