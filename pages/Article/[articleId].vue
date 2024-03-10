@@ -16,7 +16,7 @@
 						</div>
 					</div>
 					<div class="right">
-						<button @click="wage(article.user_id)">{{ !isWage ? '+ 关注' : '✓ 取消关注' }}</button>
+						<el-button type="primary" plain :icon="Check" @click="wage(article.user_id)">{{ !isWage ? '+ 关注' : '✓ 取消关注' }}</el-button>
 					</div>
 				</div>
 
@@ -89,7 +89,7 @@ const wage = async (id:number) => {
 	// position: relative;
 	margin: auto;
 	width: $container-min-width;
-	min-height: calc(100vh - $nav-height);
+	min-height: calc(100vh - $nav-height - 20px);
 	padding-top: 15px;
 	display: flex;
 	justify-content: space-between;

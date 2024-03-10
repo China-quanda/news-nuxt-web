@@ -22,10 +22,15 @@
           <i class="iconfont icon-gengduo"></i>
         </div>
       </div>
-		<!-- 举报文章组件 -->
-    <ArticleReport v-if="showAccusation" :showAccusation="showAccusation" :articleId="articleId" @showAccusation="showAccusation = false"/>
+			<!-- 举报文章组件 -->
+			<ArticleReport v-if="showAccusation" :showAccusation="showAccusation" :articleId="articleId" @showAccusation="showAccusation = false"/>
       <!-- 评论抽屉组件 -->
       <ArticleDrawerComment v-if="showDrawerComment" :articleId="article.id" @close="showDrawerComment = false"  @refresh="refresh"/>
+			 <!-- 选择收藏夹对话框组件 -->
+      <ArticleDialogCollections v-model="showDialogCollections"  :articleId="article.id" />
+			<!-- @close="showDialogCollections = false"  -->
+			<!-- :show="showDialogCollections" -->
+
     </div>
 </template>
 
@@ -40,6 +45,7 @@ const props = defineProps({
 		default: 0
 	}
 })
+const showDialogCollections = ref(false) // 是否显示选择收藏夹对话框组件
 let isDianZan = ref<boolean>(true) // 是否对文章点过赞
 let isShouCang = ref<boolean>(true) // 是否收藏过该文章
 let showDrawerComment = ref<boolean>(false) // 是否显示评论抽屉组件
@@ -70,6 +76,7 @@ const refresh = ()=> {
 	}
 	// 点击收藏文章
 	const clickShouCang =async()=> {
+		showDialogCollections.value = true
 	  // if (isShouCang.value == false) {
 		// 	console.log('已收藏该篇文章'); // success
 	  //   const res = await addArticleCollections({ article_id: props.articleId })
