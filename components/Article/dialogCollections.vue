@@ -84,7 +84,7 @@
             <el-button class="pl-8! pr-8!" type="primary" plain  @click="showCreationDialog = false">
               取消
             </el-button>
-            <el-button class="pl-8! pr-8!" type="primary" @click="handleConfirm">
+            <el-button class="pl-8! pr-8!" type="primary" :disabled="!creationForm.name" @click="handleConfirm">
               确认
             </el-button>
           </div>
@@ -178,7 +178,14 @@ const handleChecked = (row,index)=>{
 }
 const handleConfirm = () =>{
   let checkedList = list.value.filter(item=>item.checked) || []
-  if(!checkedList.length) return handleClose()
+  if(!checkedList.length){
+    ElMessage({
+      message: '请选择一个收藏集！',
+      type: 'warning',
+    })
+    return 
+  }
+   
   console.log('checkedList',checkedList);
   setTimeout(() => {
     handleClose()
