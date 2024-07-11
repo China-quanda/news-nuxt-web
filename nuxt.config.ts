@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app:{
-    baseURL: '/news-nuxt-web/'
+    // baseURL: '/news-nuxt-web/'
   },
   devtools: { enabled: false },
   modules: [
